@@ -1,38 +1,222 @@
-.App {
+.app {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.heading svg {
+  margin: 30px;
+}
+
+h1,
+h2 {
+  font-size: 2.3rem;
+  letter-spacing: 15px;
+}
+
+.image {
+  margin-bottom: 0;
+}
+
+.content {
+  background-color: #FFF7F8;
   text-align: center;
+  margin-top: 0;
+  padding-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content h1 {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: hsl(0, 6%, 24%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content p {
+  color: hsl(0, 36%, 70%);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  line-height: 20px;
+}
+
+
+.content input {
+  padding: 15px;
+  border-radius: 25px;
+  border: 1px solid hsl(0, 36%, 70%);
+  background-color: #FFF7F8;
+  width: 80%;
+  border-right: none;
+}
+
+.inputField {
+  margin-top: 40px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 0;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+input::placeholder {
+  color: hsl(0, 36%, 70%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  border-radius: 28px;
+  background: linear-gradient(270deg, #F59798 0%, #FEC4C4 88.23%);
+  padding: 12px;
+  width: 65px;
+  border: none;
+  position: relative;
+  right: 60px;
+}
+
+.btn:hover {
+  box-shadow: 0px 10px 12px 0px rgba(230, 194, 194, 0.80);
+  background: #F8CECF;
+}
+
+.content .errorBox {
+  width: 69%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.content .error {
+  color: hsl(0, 93%, 68%);
+  margin-top: 0;
+  font-size: 0.6rem;
+}
+
+.inputField .errorIcon {
+  position: relative;
+  right: 70px;
+}
+
+.inputField .noErrorIcon {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .desktopImage {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 550px) {
+  .app {
+    display: flex;
+    padding: 0;
+    margin: 0;
   }
+
+  .flexBox {
+    align-items: flex-start;
+  }
+
+  h1,
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .heading {
+    padding-left: 10px;
+  }
+
+  .image {
+    display: none;
+  }
+
+
+  .content {
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-bottom: 220px;
+    background-image: url('./assets/images/bg-pattern-desktop.svg');
+  }
+
+  .content p {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .inputField {
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+
+  .content .errorBox {
+    width: 93%;
+  }
+}
+
+
+@media (min-width: 970px) {
+
+  .heading {
+    padding-left: 80px;
+  }
+
+  h1,
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  .content {
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .content p {
+    width: 400px;
+    font-size: 1rem;
+    line-height: 25px;
+    ;
+  }
+
+}
+
+@media (min-width: 1100px) {
+  .content p {
+    width: 450px;
+    padding-right: 160px;
+  }
+
+  .content {
+    padding-bottom: 107px;
+  }
+
+  .content input {
+    width: 350px;
+  }
+
+  .inputField {
+    justify-content: flex-start;
+  }
+
+  .btn {
+    right: 65px;
+  }
+
+  .inputField .errorIcon {
+    right: 80px;
+  }
+
+
 }
